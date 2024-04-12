@@ -1,0 +1,47 @@
+@startuml
+title TD6
+'''classes
+
+class Lampe{
+- nom : String
+- allume : boolean
+  + Lampe(nom)
+  + allumer()
+  +eteindre()
+  +toString()
+}
+class Telecommande{
+- lampes : List<lampe>
++ Telecommande()
++ ajouterLampe(lampe)
++ activerLampe(indiceLampe)
++ desactiverLampe (indiceLampe)
++ ajouterHifi(Hifi)
++ activerHifi(indiceHifi)
++ desactiverHifi (indiceHifi)
++ ajouterTelevision(Television)
++ activerTelevision(indiceTelevision)
++ desactiverTelevision (indiceTelevision)
++ activerTout()
++toString()
+}
+
+class Hifi{
+- son : int
++ allumer()
++ eteindre()
++ toString()
+}
+
+class Television{
+- son : int
++ allumer()
++ eteindre()
++ toString()
+}
+
+'''relations
+Telecommande "1" --> "*" Hifi : - hifis
+Telecommande "1" --> "*" Lampe : - lampes
+Telecommande "1" --> "*" Television : - televisions
+@enduml

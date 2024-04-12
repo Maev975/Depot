@@ -1,0 +1,17 @@
+Q3 : 
+on peut remarquer que d'apres la commande git bash qu'il y a une cinquante-deux modifications.
+
+Q5 :
+oui nous avons copier coller.
+le problème, lorsqu'on copie colle un fichier, on copie également tous ses bugs. si l'on veut modifier les indices, il faudra le modifier dans otus les fihciers du TD.
+le code n'est donc pas facilement maintenable puisqu'il y a de nombreuses modifications a faire.
+
+Q6 :
+la classe telecommande dépend des différents appareils tels que la classe Hifi ou Television. des modifications dans la classe Telecommandes sont nécessaires si les méthodes changent.
+
+Q7 :
+pour activer els appareils connectés, on utilise allumer
+pour désactiver els appareils connectés, on utilise Eteindre
+pour modifier les réglages  (volume...), on utilise Regler les Paramètres
+
+Q8 :
