@@ -1,65 +1,35 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Telecommande {
-    private List<Lampe> lampes;
-    private List<Hifi> chainesHifi;
+    private ArrayList<Appareil> appareils;
 
     public Telecommande() {
-        this.lampes = new ArrayList<>();
-        this.chainesHifi = new ArrayList<>();
+        appareils = new ArrayList<>();
     }
 
-    public void ajouterLampe(Lampe lampe) {
-        lampes.add(lampe);
+    public void ajouterAppareil(Appareil appareil) {
+        appareils.add(appareil);
     }
 
-    public void ajouterChaineHifi(Hifi chaineHifi) {
-        chainesHifi.add(chaineHifi);
+    public void activerAppareil(int indiceAppareil) {
+        Appareil appareil = appareils.get(indiceAppareil);
+        appareil.allumer();
     }
 
-    public void activerLampe(int indiceLampe) {
-        if (indiceLampe >= 0 && indiceLampe < lampes.size()) {
-            Lampe lampe = lampes.get(indiceLampe);
-            lampe.allumer();
-        } else {
-            throw new IndexOutOfBoundsException("Indice de lampe invalide");
-        }
-    }
-
-    public void desactiverLampe(int indiceLampe) {
-        if (indiceLampe >= 0 && indiceLampe < lampes.size()) {
-            Lampe lampe = lampes.get(indiceLampe);
-            lampe.eteindre();
-        } else {
-            throw new IndexOutOfBoundsException("Indice de lampe invalide");
-        }
-    }
-
-    public void activerChaineHifi(int indiceChaineHifi) {
-        if (indiceChaineHifi >= 0 && indiceChaineHifi < chainesHifi.size()) {
-            Hifi chaineHifi = chainesHifi.get(indiceChaineHifi);
-            chaineHifi.allumer();
-        } else {
-            throw new IndexOutOfBoundsException("Indice de chaîne Hi-Fi invalide");
-        }
-    }
-
-    public void desactiverChaineHifi(int indiceChaineHifi) {
-        if (indiceChaineHifi >= 0 && indiceChaineHifi < chainesHifi.size()) {
-            Hifi chaineHifi = chainesHifi.get(indiceChaineHifi);
-            chaineHifi.eteindre();
-        } else {
-            throw new IndexOutOfBoundsException("Indice de chaîne Hi-Fi invalide");
-        }
+    public void desactiverAppareil(int indiceAppareil) {
+        Appareil appareil = appareils.get(indiceAppareil);
+        appareil.eteindre();
     }
 
     public void activerTout() {
-        for (Lampe lampe : lampes) {
-            lampe.allumer();
+        for (Appareil appareil : appareils) {
+            appareil.allumer();
         }
-        for (Hifi chaineHifi : chainesHifi) {
-            chaineHifi.allumer();
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Télécommande avec les appareils suivants:\n");
+        for (Appareil appareil : appareils) {
+            sb.append("- ").append(appareil.toString()).append("\n");
         }
+        return sb.toString();
     }
 }
