@@ -1,0 +1,2 @@
+Q1 : 
+Pour adapter la classe Cheminee sans la modifier, nous pouvons créer une classe adaptateur ChemineeAdapter qui implémente l'interface Appareil. Cette classe adapter  implémentera les méthodes nécessaires pour utiliser la cheminée via la télécommande.

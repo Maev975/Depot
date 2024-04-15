@@ -1,0 +1,22 @@
+@startuml
+interface Appareil {
+    + allumer()
+    + eteindre()
+}
+
+class ChemineeAdapter {
+    + ChemineeAdapter(cheminee: Cheminee)
+    + allumer()
+    + eteindre()
+}
+
+class Cheminee {
+    - intensite: int
+    + changerIntensite(int)
+    + getLumiere(): int
+}
+
+Appareil <|.. ChemineeAdapter
+ChemineeAdapter --> "*" Cheminee : - cheminees
+
+@enduml
