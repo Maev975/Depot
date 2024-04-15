@@ -33,6 +33,7 @@ class Television{
 + toString()
 }
 
+
 Interface Appareil{
 + allumer()
 + eteindre()
