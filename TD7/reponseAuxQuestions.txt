@@ -14,4 +14,8 @@ pour activer els appareils connectés, on utilise allumer
 pour désactiver els appareils connectés, on utilise Eteindre
 pour modifier les réglages  (volume...), on utilise Regler les Paramètres
 
-Q8 :
+Q12 : 
+la nouvelle conception de la class nous permet d'ajouter n'importe quel appareil grace a l'interface appareil. la télécommande passe par l'interface appareil qui sert a activer ou désactiver n'omporte quel appareil. cela évite aussi le copier collé 
+
+Q13 :
+pour créer la classe télévision, il faut creer une classe television qui implemente l'interface controllable. cette classe doit définir des méthodes pour géréer les bases de la télévision.
