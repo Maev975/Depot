@@ -12,15 +12,9 @@ class Lampe{
 }
 class Telecommande{
 + Telecommande()
-+ ajouterLampe(lampe)
-+ activerLampe(indiceLampe)
-+ desactiverLampe (indiceLampe)
-+ ajouterHifi(Hifi)
-+ activerHifi(indiceHifi)
-+ desactiverHifi (indiceHifi)
-+ ajouterTelevision(Television)
-+ activerTelevision(indiceTelevision)
-+ desactiverTelevision (indiceTelevision)
++ ajouterAppareil(Appareil)
++ activerAppareil(indiceAppareil)
++ desactiverAppareil (indiceAppareil)
 + activerTout()
 +toString()
 }
@@ -39,14 +33,14 @@ class Television{
 + toString()
 }
 
-class Appareil{
+Interface Appareil{
 + allumer()
 + eteindre()
 }
 
 '''relations
 Telecommande --> "*" Appareil : - appareils
-Appareil --> "*" Hifi : - hifis
-Appareil --> "*" Lampe : - lampes
-Appareil --> "*" Television : - televisions
+Appareil <|.. Hifi
+Appareil <|.. Lampe
+Appareil <|.. Television
 @enduml
